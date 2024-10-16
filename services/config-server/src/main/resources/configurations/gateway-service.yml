@@ -11,3 +11,15 @@ spring:
           uri: lb://PROFILE-SERVICE
           predicates:
             - Path=/api/v1/profiles/**
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/v1/authentication/**
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/v1/roles/**
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/v1/users/**

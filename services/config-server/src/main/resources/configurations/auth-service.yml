@@ -1,0 +1,18 @@
+server:
+  port: 8070
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/auth-service
+    username: codares
+    password: codares
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+authorization:
+  jwt:
+    secret: WriteHereYourSecretStringFroTokenSigningCredentials
+    expiration:
+      days: 7
